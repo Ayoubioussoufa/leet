@@ -13,7 +13,7 @@ public:
 
         while (i >= 0 && j >= 0) {
             if (nums1[i] > nums2[j]) {
-                nums1[k] = nums1[i];
+                nums1[k] = nums1[i]; // can segf here
                 i--;
             } else {
                 nums1[k] = nums2[j];
@@ -29,6 +29,26 @@ public:
         }
     }
 };
+
+/*
+class Solution {
+public:
+    void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
+          nums1.erase(nums1.begin()+m,nums1.end());
+    for(int i = 0; i<m; i++){
+        nums1.push_back(nums1[i]);
+        nums1.pop_back();
+    }
+    for(int i = 0; i<n; i++){
+        nums1.push_back(nums2[i]);
+    }
+    sort(nums1.begin(),nums1.end());
+    }
+    
+};
+*/
+
+//for commit
 
 int main()
 {
@@ -46,5 +66,5 @@ int main()
     nums2.push_back(6);
     // nums2.push_back();
 
-    s.merge(nums1, 3, nums2, 3);
+    s.merge(nums1, 3, nums2, 30);
 }
