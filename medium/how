@@ -1,0 +1,9 @@
+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
+
+git config --global credential.helper store
+git credential-store --file ~/.git-credentials store << EOF
+protocol=https
+host=github.com
+username=YOUR_GITHUB_USERNAME
+password=YOUR_NEW_TOKEN
+EOF
