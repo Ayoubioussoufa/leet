@@ -22,5 +22,8 @@ class Solution(object):
                 return False
         return True
 
-# or
-return len(set(s))==len(set(zip(s,t)))==len(set(t))
+# # or
+# return len(set(s))==len(set(zip(s,t)))==len(set(t))
+
+s = Solution()
+print(s.isIsomorphic("foo", "bar"))
